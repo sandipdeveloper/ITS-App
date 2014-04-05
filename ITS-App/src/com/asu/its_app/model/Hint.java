@@ -5,6 +5,7 @@ public class Hint {
 	private int hintId;
 	private String hintContent;
 	private String imageLocation;
+	
 	public int getHintId() {
 		return hintId;
 	}
