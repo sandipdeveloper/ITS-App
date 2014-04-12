@@ -1,5 +1,7 @@
 package com.example.its_app;
 
+import com.asu.its_app.dbhelper.ITSDBHelper;
+import com.asu.its_app.model.Question;
 import com.example.its_app.util.SystemUiHider;
 
 import android.annotation.TargetApi;
@@ -49,7 +51,10 @@ public class FullscreenActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.activity_fullscreen);
+        ITSDBHelper db = new ITSDBHelper(this);
+		db.addQuestion(new Question());
+
+		setContentView(R.layout.activity_fullscreen);
 
         final View controlsView = findViewById(R.id.fullscreen_content_controls);
         final View contentView = findViewById(R.id.fullscreen_content);

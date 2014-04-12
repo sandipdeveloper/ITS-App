@@ -18,12 +18,4 @@ public class StepAnalyzer {
 		
 		return instance;
 	}
-	
-	public void callAssessor()
-	{
-		
-	}
-	
-	
-	
 }

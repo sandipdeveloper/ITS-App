@@ -2,29 +2,23 @@ package com.asu.its_app.model;
 
 public class Question {
 
-	private String questionBody;
-	private String imageLocation;
 	private int questionId;
-	private int kcId;
+	private String questionBody;
+	private KC kc;
 	
 	
-	public int getKcId() {
-		return kcId;
+	
+	public KC getKc() {
+		return kc;
 	}
-	public void setKcId(int kcId) {
-		this.kcId = kcId;
+	public void setKc(KC kc) {
+		this.kc = kc;
 	}
 	public String getQuestionBody() {
 		return questionBody;
 	}
 	public void setQuestionBody(String questionBody) {
 		this.questionBody = questionBody;
-	}
-	public String getImageLocation() {
-		return imageLocation;
-	}
-	public void setImageLocation(String imageLocation) {
-		this.imageLocation = imageLocation;
 	}
 	public int getQuestionId() {
 		return questionId;
