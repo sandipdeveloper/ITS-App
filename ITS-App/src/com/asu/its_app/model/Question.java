@@ -1,18 +1,26 @@
 package com.asu.its_app.model;
 
+import java.util.ArrayList;
+
 public class Question {
 
 	private int questionId;
 	private String questionBody;
-	private KC kc;
+	private ArrayList<KC> kcList;
+	private int numberOfAttempts;
 	
 	
-	
-	public KC getKc() {
-		return kc;
+	public ArrayList<KC> getKcList() {
+		return kcList;
 	}
-	public void setKc(KC kc) {
-		this.kc = kc;
+	public void setKcList(ArrayList<KC> kcList) {
+		this.kcList = kcList;
+	}
+	public int getNumberOfAttempts() {
+		return numberOfAttempts;
+	}
+	public void setNumberOfAttempts(int numberOfAttempts) {
+		this.numberOfAttempts = numberOfAttempts;
 	}
 	public String getQuestionBody() {
 		return questionBody;

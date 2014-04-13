@@ -13,9 +13,8 @@ public class ITSMainActivity extends Activity{
 		
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_fullscreen);
-		ITSDBHelper db = new ITSDBHelper(this);
+		ITSDBHelper db  = ITSDBHelper.getInstance(this);
 		db.addQuestion(new Question());
-		
 		
 	}
 

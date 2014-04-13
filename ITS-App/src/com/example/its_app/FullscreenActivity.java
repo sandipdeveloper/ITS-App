@@ -51,7 +51,8 @@ public class FullscreenActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        ITSDBHelper db = new ITSDBHelper(this);
+        //create database
+        ITSDBHelper db = ITSDBHelper.getInstance(this);
 		db.addQuestion(new Question());
 
 		setContentView(R.layout.activity_fullscreen);

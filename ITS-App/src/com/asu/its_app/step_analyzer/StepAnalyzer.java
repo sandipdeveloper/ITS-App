@@ -1,15 +1,19 @@
 package com.asu.its_app.step_analyzer;
 
+import com.asu.its_app.model.Answer;
+import com.asu.its_app.model.KC;
+import com.asu.its_app.model.Question;
+
 public class StepAnalyzer {
 
-	private StepAnalyzer instance = null;
+	private static StepAnalyzer instance = null;
 	
 	protected StepAnalyzer()
 	{
 		
 	}
 	
-	public StepAnalyzer getInstance()
+	public static StepAnalyzer getInstance()
 	{
 		if(instance == null)
 		{
@@ -17,5 +21,16 @@ public class StepAnalyzer {
 		}
 		
 		return instance;
+	}
+	
+	public boolean isAnswerCorrect(Question question, Answer selectedAnswer)
+	{
+		return false;
+		
+	}
+	
+	public KC getKCForQuestion(Question question)
+	{
+		return null;	
 	}
 }
