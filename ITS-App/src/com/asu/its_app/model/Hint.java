@@ -5,7 +5,15 @@ public class Hint {
 	private int hintId;
 	private String hintContent;
 	private String imageLocation;
+	private Question question;
 	
+	
+	public Question getQuestion() {
+		return question;
+	}
+	public void setQuestion(Question question) {
+		this.question = question;
+	}
 	public int getHintId() {
 		return hintId;
 	}

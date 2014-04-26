@@ -1,16 +1,32 @@
 package com.example.its_app;
 
+import java.io.File;
+
 import com.asu.its_app.dbhelper.ITSDBHelper;
+import com.asu.its_app.model.CorrectAnswer;
+import com.asu.its_app.model.Hint;
 import com.asu.its_app.model.Question;
 import com.example.its_app.util.SystemUiHider;
 
 import android.annotation.TargetApi;
 import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.Drawable;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.TextView;
+import android.widget.TextView.BufferType;
 
 /**
  * An example full-screen activity that shows and hides the system UI (i.e.
@@ -52,13 +68,17 @@ public class FullscreenActivity extends Activity {
         super.onCreate(savedInstanceState);
 
         //create database
-        ITSDBHelper db = ITSDBHelper.getInstance(this);
+        final ITSDBHelper db = ITSDBHelper.getInstance(this);
 		db.addQuestion(new Question());
+		db.addHint(new Hint());
+		db.addCorrectAnswer(new CorrectAnswer());
+		Question prev = new Question();
+		prev.setQuestionId(0);
 
 		setContentView(R.layout.activity_fullscreen);
-
-        final View controlsView = findViewById(R.id.fullscreen_content_controls);
-        final View contentView = findViewById(R.id.fullscreen_content);
+		//tv.setText(db.getQuestion(prev), BufferType.NORMAL);
+        final View controlsView = findViewById(R.id.up);
+        final View contentView = findViewById(R.id.down);
 
         // Set up an instance of SystemUiHider to control the system UI for
         // this activity.
@@ -113,11 +133,83 @@ public class FullscreenActivity extends Activity {
                 }
             }
         });
+		TextView tv = (TextView) findViewById(R.id.textView1);
+        tv.setText(db.getQuestion(prev));
+        ImageView iv1 = (ImageView) findViewById(R.id.imageView1);
+        iv1.setImageResource(R.drawable.im1);
+        ImageView iv2 = (ImageView) findViewById(R.id.imageView2);
+        iv2.setImageResource(R.drawable.im2);
+        ImageView iv3 = (ImageView) findViewById(R.id.imageView3);
+        iv3.setImageResource(R.drawable.im3);
+        ImageView iv4 = (ImageView) findViewById(R.id.imageView4);
+        iv4.setImageResource(R.drawable.im4);
+        
+        Button hintButton = (Button) findViewById(R.id.button1);
+        
+        hintButton.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				
+				TextView tv2 = (TextView) findViewById(R.id.textView2);
+				Question question = new Question();
+				question.setQuestionId(1);
+				tv2.setText(db.getHint(question));
+			}
+		});
+        
+        Button submitButton = (Button) findViewById(R.id.button2);
+        
+        submitButton.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				
+				String selectedAnswer = "";
+						
+				RadioGroup rg = (RadioGroup) findViewById(R.id.radioGroup1);
+				
+				int id = rg.getCheckedRadioButtonId();
+				
+				if(id==-1)
+				{
+					//none
+				}
+				else if(id==R.id.radio0)
+				{
+					selectedAnswer = "a";
+				}
+				else if(id==R.id.radio1)
+				{
+					selectedAnswer = "b";
+				}
+				else if(id==R.id.radio2)
+				{
+					selectedAnswer = "c";
+				}
+				else if(id==R.id.radio3)
+				{
+					selectedAnswer = "d";
+				}
+				
+				Question question = new Question();
+				question.setQuestionId(1);
+				String correctAnswer = db.getCorrectAnswer(question);
+				RadioButton bt = (RadioButton) findViewById(id);			
+				if(selectedAnswer.equals(correctAnswer))
+				{
 
+					bt.setBackgroundColor(Color.GREEN);
+				}
+				else
+				{
+					bt.setBackgroundColor(Color.RED);
+				}
+			}
+		});
         // Upon interacting with UI controls, delay any scheduled hide()
         // operations to prevent the jarring behavior of controls going away
         // while interacting with the UI.
-        findViewById(R.id.dummy_button).setOnTouchListener(mDelayHideTouchListener);
     }
 
     @Override
@@ -162,4 +254,7 @@ public class FullscreenActivity extends Activity {
         mHideHandler.removeCallbacks(mHideRunnable);
         mHideHandler.postDelayed(mHideRunnable, delayMillis);
     }
+    
+
+
 }
