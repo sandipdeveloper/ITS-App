@@ -4,5 +4,9 @@
     <string name="app_name">ITS-App</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="title_activity_hint_fullscreen">Pythagoras\' Theorem tutor</string>
+    <string name="title_activity_stat_fullscreen">StatFullscreenActivity</string>
+    <string name="title_activity_theorem_fullscreen">Pythagoras\' Theorem tutor</string>
+    <string name="title_activity_text_fullscreen">Pythagoras\' Theorem tutor</string>
 
 </resources>

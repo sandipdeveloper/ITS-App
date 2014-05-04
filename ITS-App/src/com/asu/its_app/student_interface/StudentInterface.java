@@ -48,10 +48,10 @@ public class StudentInterface {
 		ITSDBHelper helper = ITSDBHelper.getInstance(null);
 		
 		//check whether correct/incorrect
-		isCorrect = analyzer.isAnswerCorrect(question, selectedAnswer);
+		//isCorrect = analyzer.isAnswerCorrect(question, selectedAnswer);
 		
 		//get feedback
-		feedback = module.getFeedbackFromDatabase(question, selectedAnswer);	
+		//feedback = module.getFeedbackFromDatabase(question, selectedAnswer);	
 		
 		//display feedback
 		
@@ -62,7 +62,7 @@ public class StudentInterface {
 		if(question.getNumberOfAttempts()>=5)
 		{
 			//get hint
-			hint = module.getHintFromDatabase(question);			
+			//hint = module.getHintFromDatabase(question);			
 			//display hint
 		}
 			
@@ -74,7 +74,7 @@ public class StudentInterface {
 		if(isCorrect)
 		{
 			//select next question
-			nextQuestion = selector.selectNextQuestionFromDatabase(question);
+			//nextQuestion = selector.selectNextQuestionFromDatabase(question);
 			//populate next question
 		}
 	}
@@ -85,10 +85,10 @@ public class StudentInterface {
 		Question nextQuestion = null;
 		Question question = null;
 		//get next question
-		if(isCorrect)
-			nextQuestion = selector.selectNextQuestionFromDatabase(question);
-		else
-			nextQuestion = selector.SameQuestion(question);
+		//if(isCorrect)
+			//nextQuestion = selector.selectNextQuestionFromDatabase(question);
+		//else
+			//nextQuestion = selector.SameQuestion(question);
 		
 		//populate next question
 	}
@@ -98,7 +98,7 @@ public class StudentInterface {
 		Question question = null;
 		Assessor assessor = Assessor.getInstance();		
 		PedagogicalModule module = PedagogicalModule.getInstance();
-		Hint hint= module.getHintFromDatabase(question);
+		//Hint hint= module.getHintFromDatabase(question);
 		
 		//recalculate competency
 		double competency = assessor.getCompetencyCalculated(question, true);	

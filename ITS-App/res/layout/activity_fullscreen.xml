@@ -1,159 +1,122 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
     tools:context=".FullscreenActivity" >
-
+    
     <LinearLayout
         android:id="@+id/up"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
         android:orientation="horizontal" >
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/linearLayout1"
-        android:orientation="vertical" >
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="62dp"
-        android:layout_marginRight="72dp"
-        android:layout_toLeftOf="@+id/linearLayout2" 
-        android:orientation="vertical">
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/down"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:orientation="horizontal" >
+         android:orientation="horizontal" >
     </LinearLayout>
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignRight="@+id/linearLayout1"
-        android:layout_marginBottom="32dp"
-        android:text="Submit" />
-
-    <Button
-        android:id="@+id/button1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/button2"
-        android:layout_alignBottom="@+id/button2"
-        android:layout_toLeftOf="@+id/button2"
-        android:text="Hint" 
-        android:onClick=""/>
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/linearLayout3"
-        android:layout_alignParentLeft="true"
-        android:layout_marginBottom="26dp"
-        android:text=""
-        android:textColor="#000000" />
-
-    <RadioGroup
-        android:id="@+id/radioGroup1"
-        android:layout_width="318dp"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/textView2"
-        android:layout_alignParentRight="true"
-        android:layout_marginBottom="34dp" >
-
-        <RadioButton
-            android:id="@+id/radio0"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:checked="true"
-            android:text="a"
+        <TextView
+            android:id="@+id/questionTextView"
+            android:layout_width="284dp"
+            android:layout_height="78dp"
+            android:layout_x="12dp"
+            android:layout_y="48dp"
+            android:text="TextView"
             android:textColor="#000000" />
 
-        <RadioButton
-            android:id="@+id/radio1"
+        <Button
+            android:id="@+id/submitButton"
+            style="?android:attr/buttonStyleSmall"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="b"
+            android:layout_height="34dp"
+            android:layout_x="247dp"
+            android:layout_y="427dp"
+            android:text="Submit" />
+
+        <TextView
+            android:id="@+id/feedbackTextView"
+            android:layout_width="304dp"
+            android:layout_height="32dp"
+            android:layout_x="7dp"
+            android:layout_y="392dp"
+            android:text=""
             android:textColor="#000000" />
 
-        <RadioButton
-            android:id="@+id/radio2"
+        <Button
+            android:id="@+id/hintButton"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="34dp"
+            android:layout_x="4dp"
+            android:layout_y="424dp"
+            android:text="Hint" />
+
+        <Button
+            android:id="@+id/nextButton"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="34dp"
+            android:layout_x="182dp"
+            android:layout_y="428dp"
+            android:text="Next" />
+
+        <RadioGroup
+            android:id="@+id/answerOptionRadioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="34dp"
+            android:layout_x="7dp"
+            android:layout_y="314dp"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/radio0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="a"
+                android:textColor="#000000" />
+
+            <RadioButton
+                android:id="@+id/radio1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="b"
+                android:textColor="#000000" />
+
+            <RadioButton
+                android:id="@+id/radio2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="c"
+                android:textColor="#000000" />
+
+            <RadioButton
+                android:id="@+id/radio3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="d"
+                android:textColor="#000000" />
+        </RadioGroup>
+
+        <ImageView
+            android:id="@+id/answerOptionImageView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="c"
-            android:textColor="#000000" />
-
-        <RadioButton
-            android:id="@+id/radio3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:checked="true"
-            android:text="d"
-            android:textColor="#000000" />
-    </RadioGroup>
-
-    <LinearLayout
-        android:id="@+id/linearLayout1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/radioGroup1"
-        android:layout_alignLeft="@+id/radioGroup1" >
+            android:layout_x="27dp"
+            android:layout_y="272dp"
+            android:src="@drawable/answer_option_1_1" />
 
         <ImageView
-            android:id="@+id/imageView1"
-            android:layout_width="76dp"
-            android:layout_height="76dp"
-            android:src="@drawable/ic_launcher" />
+            android:id="@+id/questionImageView"
+            android:layout_width="match_parent"
+            android:layout_height="138dp"
+            android:layout_x="-4dp"
+            android:layout_y="123dp"
+            android:src="@drawable/question_1_1" />
 
-        <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="76dp"
-            android:layout_height="match_parent"
-            android:layout_alignTop="@+id/linearLayout1"
-            android:layout_toRightOf="@+id/linearLayout1"
-            android:src="@drawable/ic_launcher" />
-
-        <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="76dp"
-            android:layout_height="match_parent"
-            android:layout_alignTop="@+id/imageView2"
-            android:layout_toRightOf="@+id/imageView2"
-            android:src="@drawable/ic_launcher" />
-
-        <ImageView
-            android:id="@+id/imageView4"
-            android:layout_width="76dp"
-            android:layout_height="match_parent"
-            android:layout_alignTop="@+id/imageView3"
-            android:layout_toRightOf="@+id/imageView3"
-            android:src="@drawable/ic_launcher" />
-    </LinearLayout>
-
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/linearLayout1"
-        android:layout_alignParentLeft="true"
-        android:text="TextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextView"
-        android:textColor="#000000" />
-
-</RelativeLayout>
+</AbsoluteLayout>

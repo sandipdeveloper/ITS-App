@@ -1,10 +1,14 @@
 package com.asu.its_app.model;
 
-public class Hint {
+import java.io.Serializable;
+
+import android.os.Parcelable;
+
+public class Hint implements Serializable{
 
 	private int hintId;
 	private String hintContent;
-	private String imageLocation;
+	private int imageLocation;
 	private Question question;
 	
 	
@@ -26,10 +30,10 @@ public class Hint {
 	public void setHintContent(String hintContent) {
 		this.hintContent = hintContent;
 	}
-	public String getImageLocation() {
+	public int getImageLocation() {
 		return imageLocation;
 	}
-	public void setImageLocation(String imageLocation) {
+	public void setImageLocation(int imageLocation) {
 		this.imageLocation = imageLocation;
 	}
 	

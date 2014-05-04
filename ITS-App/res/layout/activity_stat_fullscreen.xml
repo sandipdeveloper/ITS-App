@@ -1,0 +1,467 @@
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".StatFullscreenActivity" >
+
+
+
+
+
+    <LinearLayout
+        android:id="@+id/up"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/down"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/okButton"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_x="266dp"
+        android:layout_y="426dp"
+        android:text="OK" />
+
+    <TextView
+        android:id="@+id/TextView01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="11dp"
+        android:layout_y="407dp"
+        android:text="Percentage of incorrect answers"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/inCorrectAnswerTextView"
+        android:layout_width="45dp"
+        android:layout_height="wrap_content"
+        android:layout_x="231dp"
+        android:layout_y="407dp"
+        android:text="%"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="10dp"
+        android:layout_y="388dp"
+        android:text="Percentage of correct answers"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/correctAnswerTextView"
+        android:layout_width="44dp"
+        android:layout_height="wrap_content"
+        android:layout_x="231dp"
+        android:layout_y="386dp"
+        android:text="%"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/TextView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="8dp"
+        android:layout_y="319dp"
+        android:text="Question 12 "
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/TextView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="6dp"
+        android:layout_y="344dp"
+        android:text="Question 13 "
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/correct12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="135dp"
+        android:layout_y="319dp"
+        android:text="Correct"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/incorrect12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="207dp"
+        android:layout_y="318dp"
+        android:text="Correct"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/incorrect13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="208dp"
+        android:layout_y="341dp"
+        android:text="Correct"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/TextView17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="7dp"
+        android:layout_y="364dp"
+        android:text="Question 14 "
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/correct14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="135dp"
+        android:layout_y="363dp"
+        android:text="Correct"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/incorrect14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="206dp"
+        android:layout_y="361dp"
+        android:text="Correct"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/TextView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="7dp"
+        android:layout_y="256dp"
+        android:text="Question 9 "
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/TextView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="7dp"
+        android:layout_y="276dp"
+        android:text="Question 10 "
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/TextView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="9dp"
+        android:layout_y="296dp"
+        android:text="Question 11 "
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/correct9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="134dp"
+        android:layout_y="256dp"
+        android:text="Correct"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/incorrect9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="210dp"
+        android:layout_y="256dp"
+        android:text="Correct"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/correct10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="135dp"
+        android:layout_y="276dp"
+        android:text="Correct"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/incorrect10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="210dp"
+        android:layout_y="278dp"
+        android:text="Correct"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/correct11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="138dp"
+        android:layout_y="300dp"
+        android:text="Correct"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/incorrect111"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="210dp"
+        android:layout_y="298dp"
+        android:text="Correct"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/TextView07"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="8dp"
+        android:layout_y="186dp"
+        android:text="Question 6 "
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/TextView08"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="5dp"
+        android:layout_y="208dp"
+        android:text="Question 7 "
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/TextView09"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="7dp"
+        android:layout_y="231dp"
+        android:text="Question 8 "
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/correct6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="135dp"
+        android:layout_y="187dp"
+        android:text="Correct"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/incorrect6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="209dp"
+        android:layout_y="188dp"
+        android:text="Correct"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/correct7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="135dp"
+        android:layout_y="208dp"
+        android:text="Correct"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/incorrect7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="209dp"
+        android:layout_y="208dp"
+        android:text="Correct"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/correct8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="135dp"
+        android:layout_y="230dp"
+        android:text="Correct"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/incorrect8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="209dp"
+        android:layout_y="230dp"
+        android:text="Correct"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/TextView04"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="9dp"
+        android:layout_y="116dp"
+        android:text="Question 3 "
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/TextView05"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="6dp"
+        android:layout_y="142dp"
+        android:text="Question 4 "
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/TextView06"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="8dp"
+        android:layout_y="165dp"
+        android:text="Question 5 "
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/correct3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="134dp"
+        android:layout_y="119dp"
+        android:text="Correct"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/incorrect3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="210dp"
+        android:layout_y="120dp"
+        android:text="Correct"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/correct4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="134dp"
+        android:layout_y="144dp"
+        android:text="Correct"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/incorrect4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="212dp"
+        android:layout_y="142dp"
+        android:text="Correct"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/correct5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="134dp"
+        android:layout_y="169dp"
+        android:text="Correct"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/incorrect5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="211dp"
+        android:layout_y="169dp"
+        android:text="Correct"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/TextView02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="9dp"
+        android:layout_y="72dp"
+        android:text="Question 1"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/TextView03"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="9dp"
+        android:layout_y="94dp"
+        android:text="Question 2 "
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/correct1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="136dp"
+        android:layout_y="76dp"
+        android:text="Correct"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/incorrect1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="213dp"
+        android:layout_y="74dp"
+        android:text="Correct"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/correct2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="137dp"
+        android:layout_y="98dp"
+        android:text="Correct"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/incorrect2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="215dp"
+        android:layout_y="98dp"
+        android:text="Correct"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/TextView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="134dp"
+        android:layout_y="45dp"
+        android:text="Correct"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/TextView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="203dp"
+        android:layout_y="45dp"
+        android:text="Incorrect"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/correct13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="132dp"
+        android:layout_y="342dp"
+        android:text="Correct"
+        android:textColor="#000000" />
+
+</AbsoluteLayout>

@@ -5,7 +5,14 @@ public class Answer {
 	private String answerBody;
 	private Question question;
 	private int answerId;
+	private String selectedAnswer;
 	
+	public String getSelectedAnswer() {
+		return selectedAnswer;
+	}
+	public void setSelectedAnswer(String selectedAnswer) {
+		this.selectedAnswer = selectedAnswer;
+	}
 	public Question getQuestion() {
 		return question;
 	}
